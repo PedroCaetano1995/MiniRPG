@@ -1,32 +1,41 @@
 class Player{
-  
-float posicaoX;
-float posicaoY;
-int pontodDeVida;
-String nome;
 
-//construtor
-  Player(String nome, int ptsDeVida, float posInicialX, float posInicialY){
-    System.out.println("Construtor do Player")                                       
+  float posicaoX;
+  float posicaoY;
+  int pontosVida;
+  int danoArma;
+  int forca;
+  String nome;
+
+  //Costrutor
+  Player(String name, int pntsVida, float posicaoInicialX, float posicaoInicialY){
+    //System.out.println("Construtor do player");
+
+    nome = name;
+    pontosVida = pntsVida;
+
+    posicaoX = posicaoInicialX;
+    posicaoY = posicaoInicialY;
+    
   }
-  
-void mover(float posX, float posY){
+  int causarDano(){
+    return forca;
+  }
 
-posicaoX = PosicaoX + 5;
-posicaoY = PosicaoY + 5;
-  
-}
-
+  void mover(float posX, float posY){
+    posicaoX += 5;
+    posicaoY += 5;
+    
+  }
   float exibirPosicaoX(){
     return posicaoX;
+  }
   
-    }
   float exibirPosicaoY(){
     return posicaoY;
-  
-    }
+  }
 
- void receberDano (int dano){
+  void receberDano (int dano){
     pontosVida -= dano;
     
   }
@@ -36,10 +45,11 @@ posicaoY = PosicaoY + 5;
     
   }
 
+
   String exibirStatus(){
     String status ="Nome: " + nome + " Vida: " + pontosVida;
     return status;
-
-
-
+    
+  }
+  
 }

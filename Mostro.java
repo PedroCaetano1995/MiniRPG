@@ -1,27 +1,36 @@
 class Monstro{
+
+  String nome;
+  int pontosVida;
+  int forca;
+
+Monstro(String name, int pntsVida, int force){
+    //System.out.println("Construtor do monstro");
+
+    nome = name;
+    forca = force;
+    pontosVida = pntsVida;
+  }
   
+  int causarDano(){
+    return forca * 3;
+  }
 
-int pontoDeVida;
-String nome;
-int forca = 5
-ind causarDano
+  String grunhir(){
+    return "hasta la vista baby!";
+  }
 
-void causarDano = forca * 3
-  
-  
-  
-
-
-void receberDano(int dano){
- pontosDeVida -= dano; 
- 
-
-if  (pontosDeVida <=0){
-    morrer()
+  void receberDano(int dano){
+    pontosVida-=dano; 
+    if(pontosVida <= 0){
+      morrer();
+    }
+  }
+  void morrer(){
+    System.out.println("O monstro está morto.");
+  }
+  String exibirStatus(){
+    String status ="Nome: " + nome + " Vida: " + pontosVida;
+    return status;
   }
 }
-
-
-void morrer(){
-System.out.println("Construtor do Player")  }                                     
-  }
