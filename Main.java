@@ -1,9 +1,9 @@
 class Main {
   public static void main(String[] args){
     
-    Player player01 = new Player("FoxTrot", 100, 10,10);
-    Monstro monstro01 = new Monstro("Gugu", 100, 2);
-    Arma arma01 = new Arma("Fuzil", 4);
+    Player player01 = new Player("Josisvaldo", 100, 10,10);
+    Monstro monstro01 = new Monstro("mago", 100, 2);
+    Arma arma01 = new Arma("Pá de pedreiro", 4);
 
     
     if (monstro01.pontosVida >= 0){
@@ -15,7 +15,7 @@ class Main {
     System.out.println(monstroStatus);
     
     String playerStatus = player01.exibirStatus();
-    System.out.println(playerStatus)
+    System.out.println(playerStatus);
     String causarDano = arma01.exibirStatus();
     System.out.println(causarDano);
  }
